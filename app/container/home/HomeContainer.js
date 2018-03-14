@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import {View, Text, Image, StyleSheet, Button} from 'react-native'
 import { Actions } from 'react-native-router-flux'
+import { MessageBarManager } from 'react-native-message-bar'
 
 // components
 import { SafeView } from '../../components'
@@ -20,6 +21,10 @@ export default class CurrentPage extends Component{
 				<Text>home.</Text>
 				<Button title="Demo" onPress={Actions.demo}/>
 				<Button title="Test" onPress={Actions.test}/>
+				<Button title="LightBox" onPress={Actions.demoLightBox}/>
+				<Button title="ErrorModal" onPress={Actions.errorModal}/>
+				<Button title="Login" onPress={Actions.loginStack}/>
+				<Button title="Message bar test" onPress={Actions.messageBarTest}/>
 			</View>
 			</SafeView>
 		)

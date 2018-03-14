@@ -10,9 +10,14 @@ import TimerMixin from 'react-timer-mixin'
 import _ from 'lodash'
 
 // components
+import { DemoLightBox, ErrorModal, MessageBar } from '../components'
+
 // containers
+// login
+import LoginContainer from './login/LoginContainer'
 // home
 import HomeContainer from './home/HomeContainer'
+import MessageBarTest from './home/MessageBarTest'
 // work
 import WorkContainer from './work/WorkContainer'
 import TestContainer from './work/TestContainer'
@@ -75,27 +80,31 @@ export default class extends Component{
 							<Stack key="init" back>
 								<Scene key="home" initial back={false} component={HomeContainer}
 								 title="home" 
-								>
-								</Scene>
-								<Scene key="mine" back={false} component={MineContainer}
-								 title="home" 
-								>
-								</Scene>
-								<Scene key="demo" back={false} component={DemoContainer}
-								 title="home" 
-								>
-								</Scene>
-								<Scene key="work" back={false} component={WorkContainer}
-								 title="home" 
-								>
-								</Scene>
-								<Scene key="test" back={false} component={TestContainer}
-								 title="home" 
-								>
-								</Scene>
+								/>
+								<Scene key="mine" component={MineContainer}
+								 title="mine" 
+								/>
+								<Scene key="demo" component={DemoContainer}
+								 title="demo" 
+								/>
+								<Scene key="work" component={WorkContainer}
+								 title="work" 
+								/>
+								<Scene key="test"  component={TestContainer}
+								 title="test" 
+								/>
+								<Scene key="messageBarTest" component={MessageBarTest}  
+									title="Message Bar Test"
+								/>
 							</Stack>
+							<Scene key="demoLightBox" component={DemoLightBox}/>
 						</Lightbox>
+						<Scene key="errorModal" component={ErrorModal}/>
+						<Stack key="loginStack" hideNavBar >
+							<Scene key="login" component={LoginContainer} title="登录"/>
+						</Stack>
 					</Modal>
+					<Scene component={MessageBar}/>
 				</Overlay>
 			</Router>
 		)

@@ -1,6 +1,8 @@
 
 import SafeView from './SafeAreaView'
+import MessageBar from './MessageBar'
 
 module.exports = {
-	SafeView
+	SafeView,
+	MessageBar
 }

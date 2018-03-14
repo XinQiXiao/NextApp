@@ -14,9 +14,9 @@ export default class CurrentPage extends Component{
 	render(){
 		return(
 			<SafeView >
-			<View style={styles.container}>
-				<Text>mine demo.</Text>
-			</View>
+				<View style={styles.container}>
+					<Text>message bar test.</Text>
+				</View>
 			</SafeView>
 		)
 	}
