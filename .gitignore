@@ -41,6 +41,17 @@ buck-out/
 \.buckd/
 *.keystore
 
+# VSCode
+.vscode
+tsconfig.json
+react-native.d.ts
+jsconfig.json
+bundles/
+package-lock.json
+
+# 项目 privary
+app/helpers/config.js
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the

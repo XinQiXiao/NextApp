@@ -3,6 +3,8 @@
  */
 import React, { Component } from 'react'
 
+import DeviceInfo from 'react-native-device-info'
+
 // components
 import MainRoot from './container/Main'
 
@@ -13,6 +15,10 @@ import MainRoot from './container/Main'
 export default class extends Component{
 	constructor(props){
 		super(props)
+	}
+
+	componentDidMount(){
+		// console.log('DeviceInfo ==>', DeviceInfo.getAllDevicesInfo())
 	}
 
 	render(){
