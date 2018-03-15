@@ -13,16 +13,14 @@ import _ from 'lodash'
 import { DemoLightBox, ErrorModal, MessageBar } from '../components'
 
 // containers
+import TabBarContainer from './TabbarContainer'
 // login
 import LoginContainer from './login/LoginContainer'
 // home
-import HomeContainer from './home/HomeContainer'
 import MessageBarTest from './home/MessageBarTest'
 // work
-import WorkContainer from './work/WorkContainer'
 import TestContainer from './work/TestContainer'
 // mine
-import MineContainer from './mine/MineContainer'
 import DemoContainer from './mine/DemoContainer'
 
 const reducerCreate = params => {
@@ -78,17 +76,9 @@ export default class extends Component{
 					<Modal key="modal" hideNavBar>
 						<Lightbox key="lightbox" hideNavBar>
 							<Stack key="init" back>
-								<Scene key="home" initial back={false} component={HomeContainer}
-								 title="home" 
-								/>
-								<Scene key="mine" component={MineContainer}
-								 title="mine" 
-								/>
+								<Scene key="main"  back={false} hideNavBar component={TabBarContainer} />
 								<Scene key="demo" component={DemoContainer}
 								 title="demo" 
-								/>
-								<Scene key="work" component={WorkContainer}
-								 title="work" 
 								/>
 								<Scene key="test"  component={TestContainer}
 								 title="test" 
