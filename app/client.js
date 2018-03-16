@@ -7,14 +7,15 @@ import { Provider } from 'react-redux'
 // components
 import MainRoot from './container/Main'
 
-// apiClient redux
+// apiClient redux storage
 import { ApiClient } from './helpers'
 import createStore from './redux/create'
+import storage from "./modules/storage";
  
 const client = new ApiClient()
 const store = createStore(client)
 
-// TODO global storage
+global.storage = storage
 
 export default class extends Component{
 	constructor(props){

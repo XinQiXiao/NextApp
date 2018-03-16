@@ -5,6 +5,7 @@
 	
 	### 项目说明
 		采用 react-native-router-flux 导航组件
+				react-native-storage  AsyncStorage 
 
 		## 
 		适配 iOS
