@@ -6,7 +6,6 @@ export default class CurrentPage extends Component{
 	constructor(props){
 		super(props)
 
-		this.pageName = 'mine'
 	}
 
 	render(){

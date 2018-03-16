@@ -2,14 +2,18 @@
  * 
  */
 import React, { Component } from 'react'
-
-import DeviceInfo from 'react-native-device-info'
+import { Provider } from 'react-redux'
 
 // components
 import MainRoot from './container/Main'
 
-// TODO apiClient
-// TODO store 
+// apiClient redux
+import { ApiClient } from './helpers'
+import createStore from './redux/create'
+ 
+const client = new ApiClient()
+const store = createStore(client)
+
 // TODO global storage
 
 export default class extends Component{
@@ -17,11 +21,11 @@ export default class extends Component{
 		super(props)
 	}
 
-	componentDidMount(){
-		// console.log('DeviceInfo ==>', DeviceInfo.getAllDevicesInfo())
-	}
-
 	render(){
-		return <MainRoot />
+		return (
+			<Provider store={store}>
+				<MainRoot />
+			</Provider>
+		)
 	}
 }
