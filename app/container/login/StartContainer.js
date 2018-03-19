@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react'
-import {View, Text, Image, StyleSheet, Button, Alert} from 'react-native'
+import {View, Text, Image, StyleSheet, Button, Alert, Linking} from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import codePush from 'react-native-code-push'
 
@@ -13,7 +13,16 @@ class PageContainer extends Component{
 	}
 
 	componentWillMount(){
-		this._checkJsUpdate()
+		this._doStart()
+	}
+
+	componentDidMount(){
+		// 如果 CodePush 采用 updateDialog 方式 则必须手工调用此方法
+		// codePush.notifyAppReady()   
+	}
+
+	_doStart(){
+		// this._checkJsUpdate()
 	}
 
 	async _checkJsUpdate(){
@@ -54,7 +63,7 @@ class PageContainer extends Component{
 		return (
 			<View style={styles.container}>
 				<Text>Start Page.</Text>
-				<Button title="Main" onPress={Actions.main}/>
+				<Button title="to login" onPress={Actions.loginStack}/>
 			</View>
 		)
 	}
