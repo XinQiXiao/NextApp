@@ -16,6 +16,7 @@ import { DemoLightBox, ErrorModal, MessageBar } from '../components'
 import TabBarContainer from './TabbarContainer'
 // login
 import LoginContainer from './login/LoginContainer'
+import StartContainer from './login/StartContainer'
 // home
 import MessageBarTest from './home/MessageBarTest'
 // work
@@ -76,6 +77,7 @@ export default class extends Component{
 					<Modal key="modal" hideNavBar>
 						<Lightbox key="lightbox" hideNavBar>
 							<Stack key="init" back>
+								<Scene key="start" initial hideNavBar component={StartContainer}/>
 								<Scene key="main"  back={false} hideNavBar component={TabBarContainer} />
 								<Scene key="demo" component={DemoContainer}
 								 title="demo" 

@@ -28,6 +28,9 @@ class CurrentPage extends Component{
 		return (
 			<View style={styles.container}>
 				<Text>mine.</Text>
+				<Text>have text</Text>
+				<Text>当前版本0.0.5</Text>
+				<Image style={styles.cameraImg} source={require('../../sources/images/common/camera.png')}/>
 			</View>
 		)
 	}
@@ -38,6 +41,11 @@ const styles = StyleSheet.create({
 		flex: 1, 
 		justifyContent: 'center',
 		alignItems: 'center'
+	},
+	cameraImg: {
+		marginTop: 20,
+		width: 37,
+		height: 32
 	}
 })
 

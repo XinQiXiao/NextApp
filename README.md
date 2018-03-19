@@ -26,3 +26,23 @@
 	### 隐私问题 如下文件并为上传
 		#helpers 下
 			config.js
+
+
+	### 热更新
+
+		## code-push 
+		参考gitHub： https://github.com/Microsoft/react-native-code-push
+		iOS 配置 https://github.com/Microsoft/react-native-code-push/blob/master/docs/setup-ios.md
+
+		参考链接：https://www.jianshu.com/p/61af70e4d281
+		参考链接：https://www.jianshu.com/p/fa362da953c7
+
+		遇到回滚问题,在 index.js中有解决方法
+
+		# 打包 release
+			react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ./bundles/ios.jsbundle --assets-dest ./bundles --dev false
+		# 发布到code-push Staging
+			code-push release-react NextApp ios
+
+		# 查看历史版本
+			code-push deployment history NextApp Staging
