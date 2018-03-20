@@ -19,6 +19,9 @@ class PageContainer extends Component{
 	componentDidMount(){
 		// 如果 CodePush 采用 updateDialog 方式 则必须手工调用此方法
 		// codePush.notifyAppReady()   
+		setTimeout(()=>{
+			Actions.loginStack()
+		}, 1000)
 	}
 
 	_doStart(){

@@ -6,7 +6,13 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 // components
-import { SafeView } from '../../components'
+import { SafeView, ButtonCollection } from '../../components'
+
+// style
+import { colorsCons } from '../../constants'
+
+// 组件 二级解析
+const { CustomButton } = ButtonCollection
 
 const mapStateToProps = state => ({
 	loading: state.login.loading
@@ -21,7 +27,12 @@ class CurrentPage extends Component{
 	constructor(props){
 		super(props)
 
-		this.pageName = 'mine demo'
+		// click
+		this._loginClick = this._loginClick.bind(this)
+	}
+
+	_loginClick(e){
+		
 	}
 
 	render(){
@@ -30,7 +41,9 @@ class CurrentPage extends Component{
 				<View style={styles.container}>
 					<Text>login.</Text>
 					<Button title="back" onPress={Actions.pop}/>
-					<Button title="main" onPress={Actions.main}/>
+					<CustomButton bgTouchStyle={styles.loginBtnBg} textStyle={styles.loginBtnText}
+						buttonPress={this._loginClick} textContent='登录'
+					/>
 				</View>
 			</SafeView>
 		)
@@ -40,9 +53,18 @@ class CurrentPage extends Component{
 const styles = StyleSheet.create({
 	container: {
 		flex: 1, 
+		backgroundColor: colorsCons.PAGE_BG_COLOR,
+	},
+	loginBtnBg: {
+		height: 76/2,
+		backgroundColor: colorsCons.CUSTOM_BULE_COLOR,
+		borderRadius: 3,
 		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#f00'
+		alignItems: 'center'
+	},
+	loginBtnText: {
+		fontSize: 16,
+		color: '#fff'
 	}
 })
 
