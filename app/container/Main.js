@@ -17,11 +17,14 @@ import TabBarContainer from './TabbarContainer'
 // login
 import LoginContainer from './login/LoginContainer'
 import StartContainer from './login/StartContainer'
-// home
+/// home
 import MessageBarTest from './home/MessageBarTest'
-// work
+
+/// work
+// contract
+import ContractOptions from './work/pages/ContractOptionsContainer'
 import TestContainer from './work/TestContainer'
-// mine
+/// mine
 import DemoContainer from './mine/DemoContainer'
 
 const reducerCreate = params => {
@@ -77,17 +80,20 @@ export default class extends Component{
 					<Modal key="modal" hideNavBar>
 						<Lightbox key="lightbox" hideNavBar>
 							<Stack key="init" back>
-								<Scene key="start" initial hideNavBar component={StartContainer}/>
-								<Scene key="main"  back={false} hideNavBar component={TabBarContainer} />
+								<Scene key="start"  hideNavBar component={StartContainer}/>
+								<Scene key="main" initial  back={false} hideNavBar component={TabBarContainer} />
 								<Scene key="demo" component={DemoContainer}
-								 title="demo" 
+								 	title="demo" 
 								/>
 								<Scene key="test"  component={TestContainer}
-								 title="test" 
+								 	title="test" 
 								/>
 								<Scene key="messageBarTest" component={MessageBarTest}  
 									title="Message Bar Test"
 								/>
+								{/* ---Work--- */}
+								{/* ---Contract--- */}
+								<Scene key="contractOptions" component={ContractOptions} title="contract" hideNavBar={false}/>
 							</Stack>
 							<Scene key="demoLightBox" component={DemoLightBox}/>
 						</Lightbox>

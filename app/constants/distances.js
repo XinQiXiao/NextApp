@@ -17,11 +17,15 @@ const TAB_HEIGHT = 44
 const TAB_BOTTOM_HEIGHT = DeviceInfo.getModel()  == 'iPhone X' ? 34 : 0
 const TAB_TOTAL_HEIGHT = TAB_HEIGHT + TAB_BOTTOM_HEIGHT
 
+// common
+const BORDER_WIDTH = (2 / PixelRatio.get()) ? (2 / PixelRatio.get()) : 1
+
 module.exports = {
 	NAV_HEIGHT,
 	STATUS_BAR_HEIGHT,
 	NAV_TOTAL_HEIGHT,
 	TAB_HEIGHT,
 	TAB_BOTTOM_HEIGHT,
-	TAB_TOTAL_HEIGHT
+	TAB_TOTAL_HEIGHT,
+	BORDER_WIDTH
 }

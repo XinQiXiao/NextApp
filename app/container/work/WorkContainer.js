@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
-import {View, Text, Image, StyleSheet} from 'react-native'
+import {View, Text, Image, StyleSheet, Button} from 'react-native'
+import { Actions } from 'react-native-router-flux'
 
 export default class CurrentPage extends Component{
 	constructor(props){
@@ -13,6 +14,7 @@ export default class CurrentPage extends Component{
 		return (
 			<View style={styles.container}>
 				<Text>work.</Text>
+				<Button title="to contract" onPress={Actions.contractOptions}/>
 			</View>
 		)
 	}

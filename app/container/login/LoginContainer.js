@@ -32,7 +32,7 @@ class CurrentPage extends Component{
 	}
 
 	_loginClick(e){
-		
+		// Actions.main()
 	}
 
 	render(){
