@@ -80,8 +80,9 @@ export default class extends Component{
 					<Modal key="modal" hideNavBar>
 						<Lightbox key="lightbox" hideNavBar>
 							<Stack key="init" back>
-								<Scene key="start"  hideNavBar component={StartContainer}/>
-								<Scene key="main" initial  back={false} hideNavBar component={TabBarContainer} />
+								<Scene key="start" initial  hideNavBar component={StartContainer}/>
+								<Scene key="login2" hideNavBar component={LoginContainer} title="登录"/>
+								<Scene key="main" back={false} hideNavBar component={TabBarContainer} />
 								<Scene key="demo" component={DemoContainer}
 								 	title="demo" 
 								/>

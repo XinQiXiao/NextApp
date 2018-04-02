@@ -54,6 +54,7 @@ package-lock.json
 
 # 项目 privary
 app/helpers/config.js
+app/presenters/request
 
 # fastlane
 #
