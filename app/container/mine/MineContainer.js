@@ -1,8 +1,10 @@
 
 import React, { Component } from 'react'
-import {View, Text, Image, StyleSheet} from 'react-native'
+import {View, Text, Image, StyleSheet, Button} from 'react-native'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+
+import {Actions} from 'react-native-router-flux'
 
 const mapStateToProps = state => ({
 	loading: state.mine.loading
@@ -30,6 +32,7 @@ class CurrentPage extends Component{
 				<Text>mine.</Text>
 				<Text>have text</Text>
 				<Text>当前版本0.0.5</Text>
+				<Button title='demo' onPress={Actions.demo}></Button>
 				<Image style={styles.cameraImg} source={require('../../sources/images/common/camera.png')}/>
 			</View>
 		)

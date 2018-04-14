@@ -30,7 +30,7 @@ import DemoContainer from './mine/DemoContainer'
 const reducerCreate = params => {
 	const defaultReducer = new Reducer(params)
 	return (state, action)=>{
-		console.log('ACTION:', action)
+		// console.log('ACTION:', action)
 		return defaultReducer(state, action)
 	}
 }

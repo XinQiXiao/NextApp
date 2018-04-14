@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 // components
-import { SafeView, ButtonCollection } from '../../components'
+import { SafeView, ButtonCollection, InputComponent } from '../../components'
 import { TopComponent, RemindTop, RemindBottom } from './components/common'
 
 // style
@@ -46,6 +46,11 @@ class CurrentPage extends Component{
 							<TopComponent version="0.0.1"/>
 							<View style={{marginTop: 80}}>
 								<RemindTop />
+								<View style={{width: 300, height: 40}}>
+									<InputComponent placeText="请输入内容"
+										inputOnChange={(val)=> {console.log('input onchange val===>', val)}}
+									/>
+								</View>
 								<CustomButton bgTouchStyle={styles.loginBtnBg} textStyle={styles.loginBtnText}
 									buttonPress={this._loginClick} textContent='登录'
 								/>
