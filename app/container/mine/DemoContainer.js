@@ -26,7 +26,7 @@ export default class CurrentPage extends Component{
 		return(
 			<SafeView >
 				<View style={styles.container}>
-					<Text>mine demo.</Text>
+					<Text >mine demo.</Text>
 					<ChildComponent name={this.state.childName} childChangeName={()=>this._changeClickName()}/>
 				</View>
 			</SafeView>

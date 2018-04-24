@@ -3,8 +3,11 @@
 import {PixelRatio, Dimensions, StyleSheet, Platform} from 'react-native'
 import DeviceInfo from 'react-native-device-info'
 
-//  nav height
+///  nav
+// nav height 
 const NAV_HEIGHT = Platform.OS == 'ios' ? 44 : 54
+// nav left
+const NAVBAR_LEFT_MARGIN = 15
 // status height
 const IOS_STATUS_HEIGHT = DeviceInfo.getModel()  == 'iPhone X' ? 44 : 20
 const STATUS_BAR_HEIGHT = Platform.OS == 'ios' ? IOS_STATUS_HEIGHT : 0
@@ -17,15 +20,20 @@ const TAB_HEIGHT = 44
 const TAB_BOTTOM_HEIGHT = DeviceInfo.getModel()  == 'iPhone X' ? 34 : 0
 const TAB_TOTAL_HEIGHT = TAB_HEIGHT + TAB_BOTTOM_HEIGHT
 
+// borderWidth
+const NAVBAR_BORDER_WIDTH = 0
+
 // common
 const BORDER_WIDTH = (2 / PixelRatio.get()) ? (2 / PixelRatio.get()) : 1
 
 module.exports = {
 	NAV_HEIGHT,
+	NAVBAR_LEFT_MARGIN,
 	STATUS_BAR_HEIGHT,
 	NAV_TOTAL_HEIGHT,
 	TAB_HEIGHT,
 	TAB_BOTTOM_HEIGHT,
 	TAB_TOTAL_HEIGHT,
-	BORDER_WIDTH
+	BORDER_WIDTH,
+  NAVBAR_BORDER_WIDTH
 }

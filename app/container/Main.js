@@ -27,6 +27,9 @@ import TestContainer from './work/TestContainer'
 /// mine
 import DemoContainer from './mine/DemoContainer'
 
+// style 
+import {colorsCons, styleCons} from '../constants'
+
 const reducerCreate = params => {
 	const defaultReducer = new Reducer(params)
 	return (state, action)=>{
@@ -34,6 +37,8 @@ const reducerCreate = params => {
 		return defaultReducer(state, action)
 	}
 }
+
+const backIcon = require('../sources/images/common/back_white.png')
 
 const getSceneStyle = ()=>({
 	backgroundColor: '#FFF',
@@ -80,11 +85,12 @@ export default class extends Component{
 					<Modal key="modal" hideNavBar>
 						<Lightbox key="lightbox" hideNavBar>
 							<Stack key="init" back>
-								<Scene key="start" initial  hideNavBar component={StartContainer}/>
+								<Scene key="start" hideNavBar component={StartContainer}/>
 								<Scene key="login2" hideNavBar component={LoginContainer} title="登录"/>
-								<Scene key="main" back={false} hideNavBar component={TabBarContainer} />
-								<Scene key="demo" component={DemoContainer}
-								 	title="demo" 
+								<Scene key="main" initial back={false} hideNavBar component={TabBarContainer} />
+								<Scene key="demo" component={DemoContainer} title="demo" backButtonImage={backIcon}
+									navigationBarStyle={styleCons.navStyle.navBar} titleStyle={styleCons.navStyle.navTitle}
+									leftButtonIconStyle={styleCons.navStyle.leftBarIcon} leftButtonStyle={styleCons.navStyle.backButton}
 								/>
 								<Scene key="test"  component={TestContainer}
 								 	title="test" 
