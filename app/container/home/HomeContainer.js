@@ -17,15 +17,15 @@ export default class CurrentPage extends Component{
 	render(){
 		return (
 			<SafeView >
-			<View style={styles.container}>
-				<Text>home.</Text>
-				<Button title="Demo" onPress={Actions.demo}/>
-				<Button title="Test" onPress={Actions.test}/>
-				<Button title="LightBox" onPress={Actions.demoLightBox}/>
-				<Button title="ErrorModal" onPress={Actions.errorModal}/>
-				<Button title="Login" onPress={Actions.loginStack}/>
-				<Button title="Message bar test" onPress={Actions.messageBarTest}/>
-			</View>
+				<View style={styles.container}>
+					<Text>home.</Text>
+					<Button title="Demo" onPress={Actions.demo}/>
+					<Button title="Test" onPress={Actions.test}/>
+					<Button title="LightBox" onPress={Actions.demoLightBox}/>
+					<Button title="ErrorModal" onPress={Actions.errorModal}/>
+					<Button title="Login" onPress={Actions.loginStack}/>
+					<Button title="Message bar test" onPress={Actions.messageBarTest}/>
+				</View>
 			</SafeView>
 		)
 	}
