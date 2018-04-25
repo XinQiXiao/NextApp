@@ -22,8 +22,8 @@ class CurrentPage extends Component{
 	}
 
 	componentDidMount(){
-		console.log('this.props ===>', this.props)
-		console.log('global ===>', global)
+		// console.log('this.props ===>', this.props)
+		// console.log('global ===>', global)
 	}
 
 	render(){
@@ -33,6 +33,8 @@ class CurrentPage extends Component{
 				<Text>have text</Text>
 				<Text>当前版本0.0.5</Text>
 				<Button title='demo' onPress={Actions.demo}></Button>
+				<Button title='systemNav' onPress={Actions.navUseSystem}/>
+				<Button title='customNav' onPress={Actions.navUseCustom}/>
 				<Image style={styles.cameraImg} source={require('../../sources/images/common/camera.png')}/>
 			</View>
 		)

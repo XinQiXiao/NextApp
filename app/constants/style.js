@@ -14,7 +14,7 @@ const navStyle = StyleSheet.create({
   navTitle: {
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#fff',
+    color: colors.NAV_TITLE_COLOR,
     fontSize: 18 ,
     letterSpacing: 0.5,
     fontWeight: '500',
@@ -40,6 +40,9 @@ const navStyle = StyleSheet.create({
         justifyContent: 'center',
       }
     })
+  },
+  rightTitle: {
+    color: colors.NAV_TITLE_COLOR,
   }
 })
 

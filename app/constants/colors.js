@@ -7,6 +7,7 @@ const TOUCH_BG_COLOR = '#f6f7fa'
 const PAGE_BG_COLOR = '#fff'
 const BORDER_COLOR = '#d3d3d3'
 const NAVBAR_BG_COLOR = '#73b1fa'
+const NAV_TITLE_COLOR = '#fff'
 
 module.exports = {
 	TABBAR_NOR_COLOR,
@@ -15,5 +16,6 @@ module.exports = {
 	TOUCH_BG_COLOR,
 	PAGE_BG_COLOR,
 	BORDER_COLOR,
-  NAVBAR_BG_COLOR
+  NAVBAR_BG_COLOR,
+  NAV_TITLE_COLOR
 }

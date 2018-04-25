@@ -26,9 +26,16 @@ import ContractOptions from './work/pages/ContractOptionsContainer'
 import TestContainer from './work/TestContainer'
 /// mine
 import DemoContainer from './mine/DemoContainer'
+import UseSystemContainer from './mine/demo/navBar/UseSystemContainer'
+import UseCustomContainer from './mine/demo/navBar/UseCustomContainer'
 
 // style 
 import {colorsCons, styleCons} from '../constants'
+
+
+/// const 
+
+const { navStyle } = styleCons
 
 const reducerCreate = params => {
 	const defaultReducer = new Reducer(params)
@@ -39,6 +46,7 @@ const reducerCreate = params => {
 }
 
 const backIcon = require('../sources/images/common/back_white.png')
+const rightIcon = require('../sources/images/common/navbar_mores.png')
 
 const getSceneStyle = ()=>({
 	backgroundColor: '#FFF',
@@ -89,8 +97,9 @@ export default class extends Component{
 								<Scene key="login2" hideNavBar component={LoginContainer} title="登录"/>
 								<Scene key="main" initial back={false} hideNavBar component={TabBarContainer} />
 								<Scene key="demo" component={DemoContainer} title="demo" backButtonImage={backIcon}
-									navigationBarStyle={styleCons.navStyle.navBar} titleStyle={styleCons.navStyle.navTitle}
-									leftButtonIconStyle={styleCons.navStyle.leftBarIcon} leftButtonStyle={styleCons.navStyle.backButton}
+									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
+									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
+									rightTitle='right' onRight={(state)=>{}}
 								/>
 								<Scene key="test"  component={TestContainer}
 								 	title="test" 
@@ -101,6 +110,23 @@ export default class extends Component{
 								{/* ---Work--- */}
 								{/* ---Contract--- */}
 								<Scene key="contractOptions" component={ContractOptions} title="contract" hideNavBar={false}/>
+								{/* ---Mine--- */}
+								{/* ---Demo--- */}
+								<Scene key="navUseSystem" component={UseSystemContainer} title="SystemNav" 
+									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
+									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton} 
+									backButtonImage={backIcon} /*rightButtonImage={rightIcon}*/
+									onRight={(state)=>{}}
+									rightTitle='' rightButtonTextStyle={navStyle.rightTitle}
+									rightChangeBack={(showRight)=>{
+										if(showRight){
+											Actions.refresh({rightTitle: 'right'})
+										} else {
+											Actions.refresh({rightTitle: ''})
+										}
+									}}
+								/>
+								<Scene key="navUseCustom" component={UseCustomContainer} hideNavBar={true}/>
 							</Stack>
 							<Scene key="demoLightBox" component={DemoLightBox}/>
 						</Lightbox>
