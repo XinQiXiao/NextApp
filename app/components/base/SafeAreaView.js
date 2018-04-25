@@ -1,5 +1,6 @@
 /**
  * create at 01/18/18
+ * 参考: https://github.com/react-community/react-native-safe-area-view
  */
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'

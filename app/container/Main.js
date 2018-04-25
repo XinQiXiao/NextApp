@@ -18,6 +18,7 @@ import TabBarContainer from './TabbarContainer'
 import LoginContainer from './login/LoginContainer'
 import StartContainer from './login/StartContainer'
 /// home
+import HomeContainer from './home/HomeContainer'
 import MessageBarTest from './home/MessageBarTest'
 
 /// work
@@ -126,7 +127,12 @@ export default class extends Component{
 										}
 									}}
 								/>
-								<Scene key="navUseCustom" component={UseCustomContainer} hideNavBar={true}/>
+								<Scene key="navUseCustom" component={UseCustomContainer} hideNavBar={false}
+									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
+									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton} 
+									backButtonImage={backIcon} title='CustomNav'
+									
+								/>
 							</Stack>
 							<Scene key="demoLightBox" component={DemoLightBox}/>
 						</Lightbox>

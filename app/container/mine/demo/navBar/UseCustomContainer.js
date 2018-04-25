@@ -8,7 +8,7 @@ import { Actions } from 'react-native-router-flux'
 import _ from 'lodash'
 
 // components
-import { SafeView } from '../../../../components'
+import { SafeView, RightNavBar } from '../../../../components'
 
 // style
 import { colorsCons, distancesCons, styleCons } from '../../../../constants'
@@ -18,6 +18,13 @@ class CustomContainer extends Component{
   constructor(props){
     super(props)
 
+    this._rightClick = this._rightClick.bind(this)
+  }
+
+  componentWillMount(){
+    // Actions.refresh({
+    //   renderRightButton: ()=> <Button title='right' onPress={this._rightClick}/>,
+    // })
   }
 
   _rightClick(){
@@ -25,7 +32,6 @@ class CustomContainer extends Component{
   }
 
   render(){
-    console.log('height==>', StatusBar)
     return (
       <SafeView >
         <View style={{flex: 1}}>
