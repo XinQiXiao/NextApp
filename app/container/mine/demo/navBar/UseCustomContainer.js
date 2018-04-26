@@ -22,13 +22,19 @@ class CustomContainer extends Component{
   }
 
   componentWillMount(){
-    // Actions.refresh({
-    //   renderRightButton: ()=> <Button title='right' onPress={this._rightClick}/>,
-    // })
+    Actions.refresh({
+      // rightTitle: 'right',
+      // onRight: this._rightClick,
+      renderTitle: 'aaa',
+      renderRightButton: ()=> {
+        console.log('.......')
+        return <Button title='right' onPress={this._rightClick}/>
+      },
+    })
   }
 
   _rightClick(){
-    console.log('_rightClick ===>')
+    console.log('_rightClick this===>', this)
   }
 
   render(){
