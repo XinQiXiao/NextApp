@@ -43,6 +43,9 @@ const navStyle = StyleSheet.create({
   },
   rightTitle: {
     color: colors.NAV_TITLE_COLOR,
+  },
+  rightBarButton: {
+    width: distances.NAV_BARBUTTON_WIDTH,
   }
 })
 

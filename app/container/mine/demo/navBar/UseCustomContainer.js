@@ -8,11 +8,10 @@ import { Actions } from 'react-native-router-flux'
 import _ from 'lodash'
 
 // components
-import { SafeView, RightNavBar } from '../../../../components'
+import { SafeView } from '../../../../components'
 
 // style
 import { colorsCons, distancesCons, styleCons } from '../../../../constants'
-
 
 class CustomContainer extends Component{
   constructor(props){
@@ -23,13 +22,7 @@ class CustomContainer extends Component{
 
   componentWillMount(){
     Actions.refresh({
-      // rightTitle: 'right',
-      // onRight: this._rightClick,
-      renderTitle: 'aaa',
-      renderRightButton: ()=> {
-        console.log('.......')
-        return <Button title='right' onPress={this._rightClick}/>
-      },
+      onRight: this._rightClick,
     })
   }
 

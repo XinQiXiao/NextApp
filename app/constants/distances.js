@@ -9,7 +9,7 @@ const NAV_HEIGHT = Platform.OS == 'ios' ? 44 : 54
 // nav left
 const NAVBAR_LEFT_MARGIN = 15
 // right nav bar width
-const NAV_RIGHTBAR_WIDTH = 50
+const NAV_BARBUTTON_WIDTH = 50
 // status height
 const IOS_STATUS_HEIGHT = DeviceInfo.getModel()  == 'iPhone X' ? 44 : 20
 const STATUS_BAR_HEIGHT = Platform.OS == 'ios' ? IOS_STATUS_HEIGHT : 0
@@ -31,7 +31,7 @@ const BORDER_WIDTH = (2 / PixelRatio.get()) ? (2 / PixelRatio.get()) : 1
 module.exports = {
 	NAV_HEIGHT,
 	NAVBAR_LEFT_MARGIN,
-  NAV_RIGHTBAR_WIDTH,
+  NAV_BARBUTTON_WIDTH,
 	STATUS_BAR_HEIGHT,
 	NAV_TOTAL_HEIGHT,
 	TAB_HEIGHT,

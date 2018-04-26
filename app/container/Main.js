@@ -47,7 +47,7 @@ const reducerCreate = params => {
 }
 
 const backIcon = require('../sources/images/common/back_white.png')
-const rightIcon = require('../sources/images/common/navbar_mores.png')
+const rightIconMore = require('../sources/images/common/navbar_mores.png')
 
 const getSceneStyle = ()=>({
 	backgroundColor: '#FFF',
@@ -116,7 +116,7 @@ export default class extends Component{
 								<Scene key="navUseSystem" component={UseSystemContainer} title="SystemNav" 
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton} 
-									backButtonImage={backIcon} /*rightButtonImage={rightIcon}*/
+									backButtonImage={backIcon} /*rightButtonImage={rightIconMore}*/
 									onRight={(state)=>{}}
 									rightTitle='' rightButtonTextStyle={navStyle.rightTitle}
 									rightChangeBack={(showRight)=>{
@@ -131,7 +131,8 @@ export default class extends Component{
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton} 
 									backButtonImage={backIcon} title='CustomNav'
-									
+									rightButtonImage={rightIconMore} onRight={(state)=>{}}
+									rightButtonStyle={navStyle.rightBarButton}
 								/>
 							</Stack>
 							<Scene key="demoLightBox" component={DemoLightBox}/>
