@@ -7,7 +7,12 @@ export default class CurrentPage extends Component{
 	constructor(props){
 		super(props)
 
-		this.pageName = 'work'
+	}
+
+	componentWillMount(){
+		Actions.refresh({
+			title: 'work',
+		})
 	}
 
 	render(){

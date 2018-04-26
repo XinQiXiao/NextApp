@@ -7,11 +7,32 @@ import { MessageBarManager } from 'react-native-message-bar'
 // components
 import { SafeView } from '../../components'
 
+// style 
+import {styleCons} from '../../constants'
+
+
+
+const rightBarIcon = require('../../sources/images/common/navbar_mores.png')
+const { navStyle } = styleCons
+
 export default class CurrentPage extends Component{
 	constructor(props){
 		super(props)
 
-		this.pageName = 'home'
+		this._clickRightBar = this._clickRightBar.bind(this)
+	}
+
+	componentWillMount(){
+		Actions.refresh({
+			title: 'home',
+			onRight: this._clickRightBar,
+			rightButtonImage: rightBarIcon,
+			rightButtonStyle: navStyle.rightBarButton
+		})
+	}
+
+	_clickRightBar(){
+		console.log('home click rightBar')
 	}
 
 	render(){

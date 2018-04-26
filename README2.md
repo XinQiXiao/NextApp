@@ -13,4 +13,4 @@
 		bug：  a.页面完全 自定义 NavBar还不支持，SafeView 中 StatusBar 和NavBar位置颠倒,
 					 b.在container  componentWillMount中 Actions.refresh({}) 中 renderRightButton 也不能显示
 		
-		TODO  首页 tabbar中设置navBar
+		2.tabbar container 页面设置了navBar

@@ -96,7 +96,10 @@ export default class extends Component{
 							<Stack key="init" back>
 								<Scene key="start" hideNavBar component={StartContainer}/>
 								<Scene key="login2" hideNavBar component={LoginContainer} title="登录"/>
-								<Scene key="main" initial back={false} hideNavBar component={TabBarContainer} />
+								<Scene key="main" initial back={false} component={TabBarContainer} 
+									hideNavBar={false} navigationBarStyle={navStyle.navBar} 
+									titleStyle={navStyle.navTitle} 
+								/>
 								<Scene key="demo" component={DemoContainer} title="demo" backButtonImage={backIcon}
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}

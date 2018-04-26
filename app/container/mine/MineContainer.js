@@ -21,6 +21,12 @@ class CurrentPage extends Component{
 
 	}
 
+	componentWillMount(){
+		Actions.refresh({
+			title: 'mine',
+		})
+	}
+
 	componentDidMount(){
 		// console.log('this.props ===>', this.props)
 		// console.log('global ===>', global)
