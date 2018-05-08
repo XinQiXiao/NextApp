@@ -1073,7 +1073,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haoqix.beidouQx.test;
 				PRODUCT_NAME = NextApp;
-				PROVISIONING_PROFILE = "998b7570-6cac-4667-9dcc-20aa9f01c3a5";
+				PROVISIONING_PROFILE = "6a4b3da6-69f8-4c5e-b6df-666c12d9b98c";
 				PROVISIONING_PROFILE_SPECIFIER = qxTestDevelopment;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1107,7 +1107,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haoqix.beidouQx.test;
 				PRODUCT_NAME = NextApp;
-				PROVISIONING_PROFILE = "998b7570-6cac-4667-9dcc-20aa9f01c3a5";
+				PROVISIONING_PROFILE = "6a4b3da6-69f8-4c5e-b6df-666c12d9b98c";
 				PROVISIONING_PROFILE_SPECIFIER = qxTestDevelopment;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
