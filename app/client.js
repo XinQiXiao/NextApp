@@ -10,14 +10,14 @@ import MainRoot from './container/Main'
 // apiClient redux storage
 import { ApiClient } from './helpers'
 import createStore from './redux/create'
-import storage from "./modules/storage";
+import storage from './modules/storage'
  
 const client = new ApiClient()
 const store = createStore(client)
 
-global.storage = storage
+// global.storage = storage
 
-export default class extends Component{
+export default class Client extends Component{
 	constructor(props){
 		super(props)
 	}

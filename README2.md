@@ -14,3 +14,6 @@
 					 b.在container  componentWillMount中 Actions.refresh({}) 中 renderRightButton 也不能显示
 		
 		2.tabbar container 页面设置了navBar
+
+	## 0.0.3
+		TODO 使用指南（iOS）

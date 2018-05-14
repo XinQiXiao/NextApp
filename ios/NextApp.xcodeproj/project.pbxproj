@@ -23,6 +23,7 @@
 		19AB14B8779B4D9D804F71DC /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E91016488F467E97386DE6 /* libCodePush.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		9993621020A937A6002FDD60 /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9993620F20A937A6002FDD60 /* CalendarManager.m */; };
 		A71C71138BD244A5BA5C83BA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CB8E0180504B178B56FA77 /* libz.tbd */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		FA76C7E10A2A429AACC2F511 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0595BC8C82419A9F5DE15E /* libRNDeviceInfo.a */; };
@@ -343,6 +344,8 @@
 		5F0595BC8C82419A9F5DE15E /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		9993620E20A937A6002FDD60 /* CalendarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
+		9993620F20A937A6002FDD60 /* CalendarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarManager.m; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		E70F9F5AEAD048A7B9FDF453 /* CodePush.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -439,6 +442,7 @@
 		13B07FAE1A68108700A75B9A /* NextApp */ = {
 			isa = PBXGroup;
 			children = (
+				9993620D20A93768002FDD60 /* jsBridge */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -568,6 +572,15 @@
 				990782C0205A79C000A0BF7F /* libRNDeviceInfo-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9993620D20A93768002FDD60 /* jsBridge */ = {
+			isa = PBXGroup;
+			children = (
+				9993620E20A937A6002FDD60 /* CalendarManager.h */,
+				9993620F20A937A6002FDD60 /* CalendarManager.m */,
+			);
+			name = jsBridge;
 			sourceTree = "<group>";
 		};
 		99E3BBA2205F8CAA0025A2DB /* Products */ = {
@@ -1026,6 +1039,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				9993621020A937A6002FDD60 /* CalendarManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
