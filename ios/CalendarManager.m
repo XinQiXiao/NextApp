@@ -7,13 +7,17 @@
 //
 
 #import "CalendarManager.h"
+#import <React/RCTConvert.h>
 
 @implementation CalendarManager
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location){
-  RCTLogInfo(@"创建日历事件 name=%@ location=%@", name, location);
+RCT_EXPORT_METHOD(addEvent:(NSString *)name details:(NSDictionary *)details){
+  NSString *location = [RCTConvert NSString:details[@"location"]];
+  NSDate *time = [RCTConvert NSDate:details[@"time"]];
+  NSString *des = [RCTConvert NSString:details[@"des"]];
+  RCTLogInfo(@"创建日历事件 name=%@ location=%@ time=%@ des=%@", name, location, time, des);
 }
 
 @end
