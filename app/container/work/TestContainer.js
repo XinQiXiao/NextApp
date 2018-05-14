@@ -9,6 +9,10 @@ export default class CurrentPage extends Component{
 		this.pageName = 'work test'
 	}
 
+	componentWillMount(){
+		// 测试 tag 功能
+	}
+
 	render(){
 		return (
 			<View style={styles.container}>
