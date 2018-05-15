@@ -40,6 +40,7 @@ class CurrentPage extends Component{
 				<Text>当前版本0.0.5</Text>
 				<Button title='demo' onPress={Actions.demo}></Button>
 				<Button title='bridge' onPress={Actions.bridge}></Button>
+				<Button title='MKMap' onPress={Actions.mkMap}></Button>
 				<Button title='systemNav' onPress={Actions.navUseSystem}/>
 				<Button title='customNav' onPress={Actions.navUseCustom}/>
 				<Image style={styles.cameraImg} source={require('../../sources/images/common/camera.png')}/>

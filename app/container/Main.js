@@ -30,6 +30,7 @@ import DemoContainer from './mine/DemoContainer'
 import UseSystemContainer from './mine/demo/navBar/UseSystemContainer'
 import UseCustomContainer from './mine/demo/navBar/UseCustomContainer'
 import BridgeContainer from './mine/demo/bridge/BridgeContainer'
+import MineMKMapContainer from './mine/demo/bridge/MKMapContainer'
 
 // style 
 import {colorsCons, styleCons} from '../constants'
@@ -107,6 +108,10 @@ export default class extends Component{
 									rightTitle='right' onRight={(state)=>{}}
 								/>
 								<Scene key="bridge" component={BridgeContainer} title="bridge" backButtonImage={backIcon}
+									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
+									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
+								/>
+								<Scene key="mkMap" component={MineMKMapContainer} title="MKMap" backButtonImage={backIcon}
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>

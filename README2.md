@@ -17,12 +17,20 @@
 
 	## 0.0.3
 		TODO 使用指南（iOS）
-		1.原生模块
-			1.1基础传值
-			1.2回调函数
-			1.3promise
-			1.4多线程
-			1.5导出常量
-			1.6枚举常量
-			1.7给JavaScript发送事件
-			1.8优化无监听处理事件
+		1.原生模块 tag v0.0.3.1
+			1.1 基础传值
+			1.2 回调函数
+			1.3 promise
+			1.4 多线程
+			1.5 导出常量
+			1.6 枚举常量
+			1.7 给JavaScript发送事件
+			1.8 优化无监听处理事件
+		2.原生UI模块 tag v0.0.3.2
+			2.1 iOS MapView样式
+			2.2 属性
+			2.3 事件
+			2.4 样式
+			参考 https://reactnative.cn/docs/0.51/native-component-ios.html#content
+			参考 https://facebook.github.io/react-native/docs/native-components-ios.html
+			（RN中文网，部分内容有错误）

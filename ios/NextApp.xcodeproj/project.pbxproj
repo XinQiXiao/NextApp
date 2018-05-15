@@ -25,6 +25,8 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		994F9FEA20A9743B00CC0423 /* CalendarEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 994F9FE920A9743B00CC0423 /* CalendarEmitter.m */; };
 		9993621020A937A6002FDD60 /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9993620F20A937A6002FDD60 /* CalendarManager.m */; };
+		99D8F98C20AAC90D00A21908 /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D8F98B20AAC90D00A21908 /* RNTMapManager.m */; };
+		99D8F99020AADF4D00A21908 /* RNTMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D8F98F20AADF4D00A21908 /* RNTMapView.m */; };
 		A71C71138BD244A5BA5C83BA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CB8E0180504B178B56FA77 /* libz.tbd */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		FA76C7E10A2A429AACC2F511 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0595BC8C82419A9F5DE15E /* libRNDeviceInfo.a */; };
@@ -349,6 +351,10 @@
 		994F9FE920A9743B00CC0423 /* CalendarEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarEmitter.m; sourceTree = "<group>"; };
 		9993620E20A937A6002FDD60 /* CalendarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
 		9993620F20A937A6002FDD60 /* CalendarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarManager.m; sourceTree = "<group>"; };
+		99D8F98A20AAC90D00A21908 /* RNTMapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTMapManager.h; sourceTree = "<group>"; };
+		99D8F98B20AAC90D00A21908 /* RNTMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTMapManager.m; sourceTree = "<group>"; };
+		99D8F98E20AADF4D00A21908 /* RNTMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTMapView.h; sourceTree = "<group>"; };
+		99D8F98F20AADF4D00A21908 /* RNTMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTMapView.m; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		E70F9F5AEAD048A7B9FDF453 /* CodePush.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -580,12 +586,24 @@
 		9993620D20A93768002FDD60 /* jsBridge */ = {
 			isa = PBXGroup;
 			children = (
+				99D8F98D20AADF1300A21908 /* RNTMap */,
 				9993620E20A937A6002FDD60 /* CalendarManager.h */,
 				9993620F20A937A6002FDD60 /* CalendarManager.m */,
 				994F9FE820A9743B00CC0423 /* CalendarEmitter.h */,
 				994F9FE920A9743B00CC0423 /* CalendarEmitter.m */,
 			);
 			name = jsBridge;
+			sourceTree = "<group>";
+		};
+		99D8F98D20AADF1300A21908 /* RNTMap */ = {
+			isa = PBXGroup;
+			children = (
+				99D8F98A20AAC90D00A21908 /* RNTMapManager.h */,
+				99D8F98B20AAC90D00A21908 /* RNTMapManager.m */,
+				99D8F98E20AADF4D00A21908 /* RNTMapView.h */,
+				99D8F98F20AADF4D00A21908 /* RNTMapView.m */,
+			);
+			name = RNTMap;
 			sourceTree = "<group>";
 		};
 		99E3BBA2205F8CAA0025A2DB /* Products */ = {
@@ -1044,6 +1062,8 @@
 			files = (
 				994F9FEA20A9743B00CC0423 /* CalendarEmitter.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				99D8F99020AADF4D00A21908 /* RNTMapView.m in Sources */,
+				99D8F98C20AAC90D00A21908 /* RNTMapManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				9993621020A937A6002FDD60 /* CalendarManager.m in Sources */,
 			);
