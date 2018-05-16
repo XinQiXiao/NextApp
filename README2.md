@@ -34,3 +34,5 @@
 			参考 https://reactnative.cn/docs/0.51/native-component-ios.html#content
 			参考 https://facebook.github.io/react-native/docs/native-components-ios.html
 			（RN中文网，部分内容有错误）
+		3.和原生通信
+			
