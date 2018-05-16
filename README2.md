@@ -15,8 +15,7 @@
 		
 		2.tabbar container 页面设置了navBar
 
-	## 0.0.3
-		TODO 使用指南（iOS）
+	## 0.0.3 使用指南（iOS）
 		1.原生模块 tag v0.0.3.1
 			1.1 基础传值
 			1.2 回调函数
@@ -36,3 +35,6 @@
 			（RN中文网，部分内容有错误）
 		3.和原生通信
 			
+	## 0.1.0 
+		1.解决Actions.replace 应用时存在的bug，降级react-native-router-flux到 4.0.0-beta.27,
+			调整start/login 路由顺序使路由跳转更合理 

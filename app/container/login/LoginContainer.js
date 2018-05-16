@@ -34,7 +34,12 @@ class CurrentPage extends Component{
 	}
 
 	_loginClick(e){
-		Actions.main()
+		const {fromPath = ''} = this.props
+		if(fromPath === 'start'){
+			Actions.replace('main', {})
+			return
+		}
+		Actions.pop()
 	}
 
 	render(){

@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native'
 import _ from 'lodash'
+import { Actions } from 'react-native-router-flux'
 
 // components
 import { SafeView } from '../../components'
@@ -51,10 +52,10 @@ class ChildComponent extends Component{
 		// 	name: 'changeName'
 		// })
 		// console.log('----')
-		const {childChangeName} = this.props
-		if(_.isFunction(childChangeName)){
-			childChangeName()
-		}
+		// const {childChangeName} = this.props
+		// if(_.isFunction(childChangeName)){
+		// 	childChangeName()
+		// }
 	}
 
 	render(){

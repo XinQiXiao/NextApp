@@ -20,8 +20,8 @@ class PageContainer extends Component{
 		// 如果 CodePush 采用 updateDialog 方式 则必须手工调用此方法
 		// codePush.notifyAppReady()   
 		setTimeout(()=>{
-			Actions.login2()
-		}, 1000)
+			Actions.replace('login2', {fromPath: 'start'})
+		}, 500)
 	}
 
 	_doStart(){

@@ -42,7 +42,9 @@ const { navStyle } = styleCons
 
 const reducerCreate = params => {
 	const defaultReducer = new Reducer(params)
+	// console.log('params:', params)
 	return (state, action)=>{
+		// console.log('State:', state)
 		// console.log('ACTION:', action)
 		return defaultReducer(state, action)
 	}
@@ -96,9 +98,9 @@ export default class extends Component{
 					<Modal key="modal" hideNavBar>
 						<Lightbox key="lightbox" hideNavBar>
 							<Stack key="init" back>
-								<Scene key="start" hideNavBar component={StartContainer}/>
-								<Scene key="login2" hideNavBar component={LoginContainer} title="登录"/>
-								<Scene key="main" initial back={false} component={TabBarContainer} 
+								<Scene key="start" initial hideNavBar={true} component={StartContainer}/>
+								<Scene key="login2" hideNavBar={true} component={LoginContainer} title="登录"/>
+								<Scene key="main" back={false} component={TabBarContainer} 
 									hideNavBar={false} navigationBarStyle={navStyle.navBar} 
 									titleStyle={navStyle.navTitle} 
 								/>

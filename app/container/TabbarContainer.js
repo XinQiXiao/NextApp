@@ -24,7 +24,7 @@ export default class CurrentPage extends Component{
 		super(props)
 
 		this.state = {
-			selectedTab: MINE
+			selectedTab: HOME
 		}
 	}
 
