@@ -7,8 +7,8 @@ import { bindActionCreators } from 'redux'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 // components
-import { SafeView, ButtonCollection, InputComponent } from '../../components'
-import { TopComponent, RemindTop, RemindBottom } from './components/common'
+import { SafeView, ButtonCollection } from '../../components'
+import { TopComponent, RemindTop, RemindBottom, CommonInput } from './components/common'
 
 // style
 import { colorsCons } from '../../constants'
@@ -29,8 +29,17 @@ class CurrentPage extends Component{
 	constructor(props){
 		super(props)
 
+		// data
+		this.state = {
+			account: '',
+			password: '',
+			showPassword: false,
+		}
 		// click
 		this._loginClick = this._loginClick.bind(this)
+		this._accountChange = this._accountChange.bind(this)
+		this._passwordChange = this._passwordChange.bind(this)
+		this._passwordEyeClick = this._passwordEyeClick.bind(this)
 	}
 
 	_loginClick(e){
@@ -42,7 +51,25 @@ class CurrentPage extends Component{
 		Actions.pop()
 	}
 
+	_accountChange(val){
+		this.setState({
+			account: val
+		})
+	}
+
+	_passwordChange(val){
+		this.setState({
+			password: val
+		})
+	}
+	_passwordEyeClick(){
+		this.setState({
+			showPassword: !this.state.showPassword
+		})
+	}
+
 	render(){
+		const {account, password, showPassword} = this.state
 		return(
 			<SafeView >
 				<View style={styles.container}>
@@ -51,11 +78,15 @@ class CurrentPage extends Component{
 							<TopComponent version="0.0.1"/>
 							<View style={{marginTop: 80}}>
 								<RemindTop />
-								<View style={{width: 300, height: 40}}>
-									<InputComponent placeText="请输入内容"
-										inputOnChange={(val)=> {console.log('input onchange val===>', val)}}
-									/>
-								</View>
+								<CommonInput style={styles.accountInput} returnKeyType='done'
+									placeText='请输入账号' valueText={account} 
+									inputOnChange={this._accountChange} 
+								/>
+								<CommonInput style={styles.passwordInput} returnKeyType='go'
+									secureTextEntry={!showPassword} placeText='请输入密码' valueText={password} 
+									inputOnChange={this._passwordChange} searchSubmit={this._loginClick}
+									showEye={true} eyePress={this._passwordEyeClick} eyeOpen={showPassword}
+								/>
 								<CustomButton bgTouchStyle={styles.loginBtnBg} textStyle={styles.loginBtnText}
 									buttonPress={this._loginClick} textContent='登录'
 								/>
@@ -80,7 +111,7 @@ const styles = StyleSheet.create({
 		marginTop: 110
 	},
 	loginBtnBg: {
-		marginTop: 80,
+		marginTop: 40,
 		height: 76/2,
 		backgroundColor: colorsCons.CUSTOM_BULE_COLOR,
 		borderRadius: 3,
@@ -90,6 +121,12 @@ const styles = StyleSheet.create({
 	loginBtnText: {
 		fontSize: 16,
 		color: '#fff'
+	},
+	accountInput: {
+		marginTop: 26,
+	},
+	passwordInput: {
+		marginTop: 20
 	}
 })
 

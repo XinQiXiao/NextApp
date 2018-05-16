@@ -38,3 +38,5 @@
 	## 0.1.0 
 		1.解决Actions.replace 应用时存在的bug，降级react-native-router-flux到 4.0.0-beta.27,
 			调整start/login 路由顺序使路由跳转更合理 
+		2.完善 InputComponent组件
+		3.完善登录界面

@@ -4,8 +4,15 @@
 import React, { Component } from 'react'
 import { View, Text, TouchableHighlight, Image, StyleSheet } from 'react-native'
 
+// components
+import { InputComponent } from '../../../components'
+
 // style
 import { colorsCons, distancesCons } from '../../../constants'
+
+// const
+const EYE_ICON_OPEN = require('../../../sources/images/login/eye_open.png')
+const EYE_ICON_CLOSE = require('../../../sources/images/login/eye_close.png')
 
 /**
  * login  top view
@@ -51,11 +58,68 @@ export class RemindBottom extends Component{
   }
 }
 
+/**
+ * 账号和密码输入框
+ */
+export class CommonInput extends Component{
+	render(){
+		const {
+			style, returnKeyType, secureTextEntry,
+			placeText, valueText,
+			inputOnChange, searchSubmit,
+			showEye, eyePress, eyeOpen,
+		} = this.props
+		return (
+			<View style={[styles.inputContainer, style]}>
+				<InputComponent placeText={placeText} valueText={valueText}
+					returnKeyType={returnKeyType} secureTextEntry={secureTextEntry}
+					inputOnChange={inputOnChange} searchSubmit={searchSubmit}
+				/>
+				<EyeButton showEye={showEye} eyePress={eyePress} eyeOpen={eyeOpen}/>
+			</View>
+		)
+	}
+}
+
+/**
+ * 控制 密码 显示隐藏 eye
+ */
+class EyeButton extends Component{
+	render(){
+		const {
+			 showEye = false, eyePress = ()=>null, eyeOpen = false,
+		} = this.props
+		if(!showEye){
+			return null
+		}
+		return (
+			<TouchableHighlight onPress={eyePress} style={styles.eyeTouch}
+				underlayColor={colorsCons.TOUCH_BG_COLOR}
+			>
+				<Image style={styles.eyeImg} source={eyeOpen ? EYE_ICON_OPEN : EYE_ICON_CLOSE}/>
+			</TouchableHighlight>
+		)
+	}
+}
 
 const styles = StyleSheet.create({
 	remindTopContainer: {
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'flex-start'
+	},
+	inputContainer: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		height: 38,
+		borderColor: colorsCons.BORDER_COLOR,
+		borderWidth: distancesCons.BORDER_WIDTH,
+		borderRadius: 3,
+	},
+	eyeTouch: {
+		justifyContent: 'center'
+	},
+	eyeImg: {
+		marginRight: 10
 	}
 })

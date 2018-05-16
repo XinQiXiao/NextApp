@@ -27,10 +27,6 @@
 		#helpers 下
 			config.js
 
-	
-	### 任务进行中
-		components/common/input
-
 
 	### 热更新
 

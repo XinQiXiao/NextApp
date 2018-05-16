@@ -20,12 +20,13 @@ class InputComponent extends Component{
 	}
 
 	_onSubmitEditing(){
-
+		this.props.searchSubmit()
 	}
 
 	render(){
 		const {
-			inputStyle, placeText, placeTextColor, returnKeyType, autoFocus, secureTextEntry, valueText, searchSubmit 
+			inputStyle, placeTextColor, returnKeyType, autoFocus, secureTextEntry, 
+			placeText, valueText, maxLength,
 		} = this.props
     if(Platform.OS === 'ios') {
       return (
@@ -37,9 +38,10 @@ class InputComponent extends Component{
 					}}
 					returnKeyType={returnKeyType}
 					autoFocus={autoFocus}
+					maxLength={maxLength}
 					secureTextEntry={secureTextEntry}
 					value={ valueText }
-					onSubmitEditing={searchSubmit}
+					onSubmitEditing={this._onSubmitEditing}
 					clearButtonMode="while-editing"
 				/>
 			)
@@ -61,11 +63,12 @@ class InputComponent extends Component{
             null
           } }
           blurOnSubmit={false}
-          autoFocus={autoFocus}
+					autoFocus={autoFocus}
+					maxLength={maxLength}
 					secureTextEntry={secureTextEntry}
           value={valueText}
           returnKeyType={returnKeyType}
-          onSubmitEditing={searchSubmit}
+          onSubmitEditing={this._onSubmitEditing}
 					clearButtonMode="while-editing"
 				/>
       </View>
@@ -82,6 +85,8 @@ InputComponent.propTypes = {
 	autoFocus: PropTypes.bool,
 	secureTextEntry: PropTypes.bool,
 	valueText: PropTypes.string,
+	searchSubmit: PropTypes.func,
+	maxLength: PropTypes.number
 }
 
 InputComponent.defaultProps = {
@@ -92,7 +97,9 @@ InputComponent.defaultProps = {
 	returnKeyType: 'done',
 	autoFocus: false,
 	secureTextEntry: false,
-	valueText: ''
+	valueText: '',
+	searchSubmit: ()=>null,
+	maxLength: 20
 }
 
 const styles = StyleSheet.create({
