@@ -31,6 +31,7 @@ import UseSystemContainer from './mine/demo/navBar/UseSystemContainer'
 import UseCustomContainer from './mine/demo/navBar/UseCustomContainer'
 import BridgeContainer from './mine/demo/bridge/BridgeContainer'
 import MineMKMapContainer from './mine/demo/bridge/MKMapContainer'
+import ReactNew from './mine/demo/reactNew/ReactNewFunc'
 
 // style 
 import {colorsCons, styleCons} from '../constants'
@@ -114,6 +115,10 @@ export default class extends Component{
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>
 								<Scene key="mkMap" component={MineMKMapContainer} title="MKMap" backButtonImage={backIcon}
+									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
+									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
+								/>
+								<Scene key="reactNew" initial component={ReactNew} title="React16.+新特性" backButtonImage={backIcon}
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>

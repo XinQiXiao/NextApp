@@ -41,6 +41,7 @@ class CurrentPage extends Component{
 				<Button title='demo' onPress={Actions.demo}></Button>
 				<Button title='bridge' onPress={Actions.bridge}></Button>
 				<Button title='MKMap' onPress={Actions.mkMap}></Button>
+				<Button title='ReactNew' onPress={Actions.reactNew}></Button>
 				<Button title='systemNav' onPress={Actions.navUseSystem}/>
 				<Button title='customNav' onPress={Actions.navUseCustom}/>
 				<Image style={styles.cameraImg} source={require('../../sources/images/common/camera.png')}/>
