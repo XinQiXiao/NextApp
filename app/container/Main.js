@@ -118,7 +118,7 @@ export default class extends Component{
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>
-								<Scene key="reactNew" initial component={ReactNew} title="React16.+新特性" backButtonImage={backIcon}
+								<Scene key="reactNew" component={ReactNew} title="React16.+新特性" backButtonImage={backIcon}
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>

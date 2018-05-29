@@ -46,7 +46,5 @@
 		参考链接：https://mp.weixin.qq.com/s/5KXDVxXgJ1ho5F7Ave8nfA
 		1.类似React.Fragment写法 或者 <></>写法
 			React.Fragment 可以用；<></>不可用
-		2.探究componentDidCatch 方法
-		3.React.createPortal方法
 		4.Context API 对比RN有种爷孙组件属性传递方法 ？content
-		5.ref API
+			TODO 
