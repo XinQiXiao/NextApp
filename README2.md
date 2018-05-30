@@ -48,3 +48,11 @@
 			React.Fragment 可以用；<></>不可用
 		4.Context API 对比RN有种爷孙组件属性传递方法 ？content
 			TODO 
+
+	## t0.3.0
+		验证 ScrollableTabView 组件
+		git 地址：https://github.com/skv-headless/react-native-scrollable-tab-view
+
+		# 试验了 baseExample / simpleExample / scrollableExample
+		# 验证 props -> doing
+		

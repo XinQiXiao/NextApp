@@ -19,6 +19,7 @@ export default class CurrentPage extends Component{
 		return (
 			<View style={styles.container}>
 				<Text>work.</Text>
+				<Button title="ScrollTab" onPress={Actions.scrollTab}/>
 				<Button title="to contract" onPress={Actions.contractOptions}/>
 			</View>
 		)
