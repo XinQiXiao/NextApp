@@ -4,7 +4,7 @@ import { DemoLightBox } from './lightBox'
 import { ErrorModal } from './modal'
 import { ButtonCollection, InputComponent } from './common'
 import { ListFlat as ListComponent } from './list'
-import { FacebookTabBar } from './scrollableTabBar'
+import { FacebookTabBar, TextTabBar } from './scrollableTabBar'
 
 module.exports = {
 	SafeView,
@@ -14,5 +14,6 @@ module.exports = {
 	ButtonCollection,
 	InputComponent,
 	ListComponent,
-	FacebookTabBar
+	FacebookTabBar,
+	TextTabBar
 }

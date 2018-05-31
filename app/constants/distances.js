@@ -28,6 +28,9 @@ const NAVBAR_BORDER_WIDTH = 0
 // common
 const BORDER_WIDTH = (2 / PixelRatio.get()) ? (2 / PixelRatio.get()) : 1
 
+// device
+const DEVEICE_WIDTH = Dimensions.get('window').width
+
 module.exports = {
 	NAV_HEIGHT,
 	NAVBAR_LEFT_MARGIN,
@@ -38,5 +41,6 @@ module.exports = {
 	TAB_BOTTOM_HEIGHT,
 	TAB_TOTAL_HEIGHT,
 	BORDER_WIDTH,
-  NAVBAR_BORDER_WIDTH
+	NAVBAR_BORDER_WIDTH,
+	DEVEICE_WIDTH
 }

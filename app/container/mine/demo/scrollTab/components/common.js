@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 	},
 	flow: {
 		flex: 1,
-		backgroundColor: '#0f0'
+		backgroundColor: '#fff'
 	},
 	jest:{
 		flex: 1,

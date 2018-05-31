@@ -42,7 +42,7 @@
 		3.完善登录界面
 
 	## 0.2.0
-	 TODO	验证功能点如下
+	 	验证功能点如下
 		参考链接：https://mp.weixin.qq.com/s/5KXDVxXgJ1ho5F7Ave8nfA
 		1.类似React.Fragment写法 或者 <></>写法
 			React.Fragment 可以用；<></>不可用
@@ -55,9 +55,15 @@
 
 		# 试验了 baseExample / simpleExample / scrollableExample
 		# 验证 props 
+			属性讲解对照：https://www.jianshu.com/p/b7788c3d106e
 		# 试验 OverlayExample / FacebookExample
 			OverlayExample 是 tabBarPosition 属性应用
 			FacebookExample 自定有tabBar FacebookTabBar(icon)
+		# t0.3.1
+		# 自定义tabbar
+			链接：https://www.jianshu.com/p/b0cfe7f11ee7
+			参照 自己原来项目
+			->进行中 doing
 
 	## TODO t0.4.0
 		熟悉 bigNumber (解决js 大数计算和小数精度问题)

@@ -40,6 +40,7 @@ import ReactNew from './mine/demo/reactNew/ReactNewFunc'
 import ScrollTabDemo from './mine/demo/scrollTab/ScrollTabDemo'
 import OverTabDemo from './mine/demo/scrollTab/OverExample'
 import FaceBookTabDemo from './mine/demo/scrollTab/FaceBookExample'
+import CustomTabDemo from './mine/demo/scrollTab/CustomExample'
 
 // style 
 import {colorsCons, styleCons} from '../constants'
@@ -130,7 +131,7 @@ export default class extends Component{
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>
-								<Scene key="scrollTab" initial component={ScrollTabDemo} title="ScrollTab" backButtonImage={backIcon}
+								<Scene key="scrollTab" component={ScrollTabDemo} title="ScrollTab" backButtonImage={backIcon}
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>
@@ -139,6 +140,10 @@ export default class extends Component{
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>
 								<Scene key="faceScrollTab" component={FaceBookTabDemo} title="FacebookExample" backButtonImage={backIcon}
+									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
+									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
+								/>
+								<Scene key="customScrollTab" component={CustomTabDemo} title="CustomExample" backButtonImage={backIcon}
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>

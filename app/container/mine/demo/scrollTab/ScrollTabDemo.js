@@ -8,6 +8,7 @@ import { View, Text, Image, StyleSheet, Button } from 'react-native'
 import ScrollableTabView, { DefaultTabBar, ScrollableTabBar } from 'react-native-scrollable-tab-view'
 
 // components
+import { SafeView } from '../../../../components'
 import { reactPage, FlowPage, jestPage } from './components/common'
 import { Actions } from 'react-native-router-flux';
 
@@ -155,26 +156,24 @@ class ScrollDemo extends Component{
 	render(){
 		const curRender = this._getScrollRender()
 		return (
-			<View style={styles.container}>
+			<SafeView >
 				<View style={styles.topChangeView}>
 					<Text >default demo</Text>
 					<Text >current page have baseExample, simpleExample, scrollableExample and props test.</Text>
 					<Button title='pageChange' onPress={this._topBtnClick}/>
 					<Button title='overExample' onPress={Actions.overScrollTab}/>
 					<Button title='facebookExample' onPress={Actions.faceScrollTab}/>
+					<Button title='customExample' onPress={Actions.customScrollTab}/>
 				</View>
 				<View style={styles.scrollView}>
 					{curRender}
 				</View>
-			</View>
+			</SafeView>
 		)
 	}
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1
-	},
 	topChangeView: {
 		flex: 1,
 		justifyContent: 'center',
