@@ -33,6 +33,9 @@ build/
 local.properties
 *.iml
 
+# fonts
+android/app/src/main/assets/fonts/
+
 # node.js
 #
 node_modules/

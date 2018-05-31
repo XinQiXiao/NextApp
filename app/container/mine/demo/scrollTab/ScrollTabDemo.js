@@ -9,6 +9,7 @@ import ScrollableTabView, { DefaultTabBar, ScrollableTabBar } from 'react-native
 
 // components
 import { reactPage, FlowPage, jestPage } from './components/common'
+import { Actions } from 'react-native-router-flux';
 
 class ScrollDemo extends Component{
 	constructor(props){
@@ -16,17 +17,25 @@ class ScrollDemo extends Component{
 
 		// data
 		this.state = {
-			pageKey:  0  // demo 切换界面 
+			pageKey:  3  // demo 切换界面 
 		}
+		this.tabs = [
+			{code: 'react', name: 'React'}, 
+			{code: 'flow', name: 'Flow'},
+			{code: 'jest', name: 'Jest'}
+		]
 
 		// UI
 		this._getScrollRender = this._getScrollRender.bind(this)
+		this._getTabRender = this._getTabRender.bind(this)
 
 		// click
-		this._pageChange = this._pageChange.bind(this)
+		this._topBtnClick = this._topBtnClick.bind(this)
+		this._onChangeTab = this._onChangeTab.bind(this)
+		this._onScroll = this._onScroll.bind(this)
 	}
 
-	_pageChange(){
+	_topBtnClick(){
 		const {pageKey} = this.state
 
 		this.setState({
@@ -34,8 +43,17 @@ class ScrollDemo extends Component{
 		})
 
 		this.setState({
-			pageKey: pageKey == 2 ? 0 : pageKey+1
+			pageKey: pageKey == 3 ? 0 : pageKey+1
 		})
+	}
+
+	_onChangeTab({i, ref}){
+		// console.log('_onChangeTab i=>', i, ' ref=>', ref)
+	}
+
+	_onScroll(numFloat){
+		// 只 tab page 滚动
+		// console.log('_onScroll numFloat=>', numFloat)
 	}
 
 	_getScrollRender(){
@@ -76,9 +94,62 @@ class ScrollDemo extends Component{
 					</ScrollableTabView>
 				)
 			}
+			case 3: {
+				return (
+					<ScrollableTabView 
+						style={styles.scrollTab}
+						renderTabBar={()=> <DefaultTabBar style={styles.defaultTabBar}/>}
+						tabBarPosition='top'
+						onChangeTab={this._onChangeTab}
+						onScroll={this._onScroll}
+						locked={true}
+						initialPage={0}
+						// page={2}
+						tabBarUnderlineStyle={{backgroundColor: '#333', height: 2}}
+						tabBarBackgroundColor='black' // DefaultTabBar 组件 style 会遮盖这个属性
+						tabBarActiveTextColor='blue'
+						tabBarInactiveTextColor='gray'
+						tabBarTextStyle={{fontSize: 15}} // 设置 color 会遮盖 tabBarActiveTextColor / tabBarInactiveTextColor
+						scrollWithoutAnimation={false}
+					>
+						{this._getTabRender()}
+					</ScrollableTabView>
+				)
+			}
 			default:
 				return null
 		}
+	}
+
+	_getTabRender(){
+		const {tabs = []} = this
+		return tabs.map((item, idx)=>{
+			switch(item.code){
+				case 'react': {
+					return (
+						<View key={item.code} tabLabel={item.name} style={styles.tabItemView}>
+							{reactPage()}
+						</View>
+					)
+				}
+				case 'flow': {
+					return (
+						<View key={item.code} tabLabel={item.name} style={styles.tabItemView}>
+							<FlowPage />
+						</View>
+					)
+				}
+				case 'jest': {
+					return (
+						<View key={item.code} tabLabel={item.name} style={styles.tabItemView}>
+							{jestPage()}
+						</View>
+					)
+				}
+				default:
+					return <View key='default' tabLabel='' style={styles.tabItemView}/>
+			}
+		})
 	}
 
 	render(){
@@ -86,7 +157,11 @@ class ScrollDemo extends Component{
 		return (
 			<View style={styles.container}>
 				<View style={styles.topChangeView}>
-					<Button title='pageChange' onPress={this._pageChange}/>
+					<Text >default demo</Text>
+					<Text >current page have baseExample, simpleExample, scrollableExample and props test.</Text>
+					<Button title='pageChange' onPress={this._topBtnClick}/>
+					<Button title='overExample' onPress={Actions.overScrollTab}/>
+					<Button title='facebookExample' onPress={Actions.faceScrollTab}/>
 				</View>
 				<View style={styles.scrollView}>
 					{curRender}
@@ -106,11 +181,16 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	scrollView: {
-		flex: 4,
-		backgroundColor: 'gray'
+		flex: 2,
 	},
 	scrollTab: {
-		marginTop: 20
+		flex: 1
+	},
+	defaultTabBar: {
+		backgroundColor: '#ddd'
+	},
+	tabItemView: {
+		flex: 1
 	}
 })
 

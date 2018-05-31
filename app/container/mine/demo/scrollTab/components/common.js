@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, ScrollView } from 'react-native'
 
 function reactPage({tabLabel = 'react'} = {}){
 	return (
@@ -15,14 +15,29 @@ class FlowPage extends Component{
 
 	render(){
 		return (
-			<View style={styles.flow}/>
+			<View style={styles.flow}>
+				<Text>flow content</Text>
+				<ScrollView style={{flex: 1}}>
+					<View style={styles.flowBigView}>
+						<Text>1</Text>
+						<Text>2</Text>
+						<Text>3</Text>
+					</View>
+				</ScrollView>
+			</View>
 		)
 	}
 }
 
 function jestPage({tabLabel = 'jest'} = {}){
 	return (
-		<View style={styles.jest} tabLabel={tabLabel}/>
+		<View style={styles.jest} tabLabel={tabLabel}>
+			<View style={styles.flowBigView}>
+				<Text>1</Text>
+				<Text>2</Text>
+				<Text>3</Text>
+			</View>
+		</View>
 	)
 }
 
@@ -38,6 +53,12 @@ const styles = StyleSheet.create({
 	jest:{
 		flex: 1,
 		backgroundColor: '#00f'
+	},
+	flowBigView: {
+		height: 2000,
+		backgroundColor: '#fff',
+		justifyContent: 'space-around',
+		alignItems: 'center'
 	}
 })
 

@@ -27,12 +27,19 @@ import ContractOptions from './work/pages/ContractOptionsContainer'
 import TestContainer from './work/TestContainer'
 /// mine
 import DemoContainer from './mine/DemoContainer'
+// navBar
 import UseSystemContainer from './mine/demo/navBar/UseSystemContainer'
 import UseCustomContainer from './mine/demo/navBar/UseCustomContainer'
+// iOS bridge
 import BridgeContainer from './mine/demo/bridge/BridgeContainer'
+// mkmap
 import MineMKMapContainer from './mine/demo/bridge/MKMapContainer'
+// new react 新特性
 import ReactNew from './mine/demo/reactNew/ReactNewFunc'
+// scrollableTabView
 import ScrollTabDemo from './mine/demo/scrollTab/ScrollTabDemo'
+import OverTabDemo from './mine/demo/scrollTab/OverExample'
+import FaceBookTabDemo from './mine/demo/scrollTab/FaceBookExample'
 
 // style 
 import {colorsCons, styleCons} from '../constants'
@@ -124,6 +131,14 @@ export default class extends Component{
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>
 								<Scene key="scrollTab" initial component={ScrollTabDemo} title="ScrollTab" backButtonImage={backIcon}
+									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
+									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
+								/>
+								<Scene key="overScrollTab" component={OverTabDemo} title="OverExample" backButtonImage={backIcon}
+									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
+									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
+								/>
+								<Scene key="faceScrollTab" component={FaceBookTabDemo} title="FacebookExample" backButtonImage={backIcon}
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>

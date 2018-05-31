@@ -54,5 +54,13 @@
 		git 地址：https://github.com/skv-headless/react-native-scrollable-tab-view
 
 		# 试验了 baseExample / simpleExample / scrollableExample
-		# 验证 props -> doing
+		# 验证 props 
+		# 试验 OverlayExample / FacebookExample
+			OverlayExample 是 tabBarPosition 属性应用
+			FacebookExample 自定有tabBar FacebookTabBar(icon)
+
+	## TODO t0.4.0
+		熟悉 bigNumber (解决js 大数计算和小数精度问题)
+		链接：https://github.com/MikeMcl/bignumber.js
+		看一下源码
 		

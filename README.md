@@ -23,6 +23,9 @@
 			}
 			```
 
+		## react-native-vector-icons 
+			链接： https://github.com/oblador/react-native-vector-icons
+
 	### 隐私问题 如下文件并为上传
 		#helpers 下
 			config.js
