@@ -63,10 +63,5 @@
 		# 自定义tabbar
 			链接：https://www.jianshu.com/p/b0cfe7f11ee7
 			参照 自己原来项目
-			->进行中 doing
-
-	## TODO t0.4.0
-		熟悉 bigNumber (解决js 大数计算和小数精度问题)
-		链接：https://github.com/MikeMcl/bignumber.js
-		看一下源码
+			
 		

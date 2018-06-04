@@ -147,7 +147,7 @@ export default class extends Component{
 									navigationBarStyle={navStyle.navBar} titleStyle={navStyle.navTitle}
 									leftButtonIconStyle={navStyle.leftBarIcon} leftButtonStyle={navStyle.backButton}
 								/>
-								<Scene key="test"  component={TestContainer}
+								<Scene key="test" component={TestContainer}
 								 	title="test" 
 								/>
 								<Scene key="messageBarTest" component={MessageBarTest}  
