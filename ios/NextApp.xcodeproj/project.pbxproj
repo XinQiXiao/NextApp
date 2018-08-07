@@ -34,6 +34,8 @@
 		90D552A142AC430F92771B73 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0761556B03A340FA911E226B /* FontAwesome.ttf */; };
 		994F9FEA20A9743B00CC0423 /* CalendarEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 994F9FE920A9743B00CC0423 /* CalendarEmitter.m */; };
 		9993621020A937A6002FDD60 /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9993620F20A937A6002FDD60 /* CalendarManager.m */; };
+		99A264542119A189001C485D /* test.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 99A264532119A189001C485D /* test.pdf */; };
+		99A264572119A1BE001C485D /* RNShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A264562119A1BE001C485D /* RNShareManager.m */; };
 		99D8F98C20AAC90D00A21908 /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D8F98B20AAC90D00A21908 /* RNTMapManager.m */; };
 		99D8F99020AADF4D00A21908 /* RNTMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D8F98F20AADF4D00A21908 /* RNTMapView.m */; };
 		A71C71138BD244A5BA5C83BA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CB8E0180504B178B56FA77 /* libz.tbd */; };
@@ -377,6 +379,9 @@
 		994F9FE920A9743B00CC0423 /* CalendarEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarEmitter.m; sourceTree = "<group>"; };
 		9993620E20A937A6002FDD60 /* CalendarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
 		9993620F20A937A6002FDD60 /* CalendarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarManager.m; sourceTree = "<group>"; };
+		99A264532119A189001C485D /* test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = test.pdf; sourceTree = "<group>"; };
+		99A264552119A1BE001C485D /* RNShareManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNShareManager.h; sourceTree = "<group>"; };
+		99A264562119A1BE001C485D /* RNShareManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNShareManager.m; sourceTree = "<group>"; };
 		99D8F98A20AAC90D00A21908 /* RNTMapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTMapManager.h; sourceTree = "<group>"; };
 		99D8F98B20AAC90D00A21908 /* RNTMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTMapManager.m; sourceTree = "<group>"; };
 		99D8F98E20AADF4D00A21908 /* RNTMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTMapView.h; sourceTree = "<group>"; };
@@ -484,6 +489,7 @@
 		13B07FAE1A68108700A75B9A /* NextApp */ = {
 			isa = PBXGroup;
 			children = (
+				99A264532119A189001C485D /* test.pdf */,
 				9993620D20A93768002FDD60 /* jsBridge */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -648,6 +654,7 @@
 		9993620D20A93768002FDD60 /* jsBridge */ = {
 			isa = PBXGroup;
 			children = (
+				99A264272119A119001C485D /* RNShare */,
 				99D8F98D20AADF1300A21908 /* RNTMap */,
 				9993620E20A937A6002FDD60 /* CalendarManager.h */,
 				9993620F20A937A6002FDD60 /* CalendarManager.m */,
@@ -655,6 +662,15 @@
 				994F9FE920A9743B00CC0423 /* CalendarEmitter.m */,
 			);
 			name = jsBridge;
+			sourceTree = "<group>";
+		};
+		99A264272119A119001C485D /* RNShare */ = {
+			isa = PBXGroup;
+			children = (
+				99A264552119A1BE001C485D /* RNShareManager.h */,
+				99A264562119A1BE001C485D /* RNShareManager.m */,
+			);
+			name = RNShare;
 			sourceTree = "<group>";
 		};
 		99D8F98D20AADF1300A21908 /* RNTMap */ = {
@@ -1110,6 +1126,7 @@
 				5530392D8A8645E9954E7FC1 /* EvilIcons.ttf in Resources */,
 				7A656C06A1B94AB4A656DE9C /* Feather.ttf in Resources */,
 				90D552A142AC430F92771B73 /* FontAwesome.ttf in Resources */,
+				99A264542119A189001C485D /* test.pdf in Resources */,
 				620F258DF84848E19EC3011E /* Foundation.ttf in Resources */,
 				4E3BCEBE213A45CDAF3B0201 /* Ionicons.ttf in Resources */,
 				B635882C546D41C09E261255 /* MaterialCommunityIcons.ttf in Resources */,
@@ -1146,6 +1163,7 @@
 			files = (
 				994F9FEA20A9743B00CC0423 /* CalendarEmitter.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				99A264572119A1BE001C485D /* RNShareManager.m in Sources */,
 				99D8F99020AADF4D00A21908 /* RNTMapView.m in Sources */,
 				99D8F98C20AAC90D00A21908 /* RNTMapManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,

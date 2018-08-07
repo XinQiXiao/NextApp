@@ -25,6 +25,7 @@ import MessageBarTest from './home/MessageBarTest'
 // contract
 import ContractOptions from './work/pages/ContractOptionsContainer'
 import TestContainer from './work/TestContainer'
+import ShareSystemContainer from './work/pages/ShareAndDownContainer'
 /// mine
 import DemoContainer from './mine/DemoContainer'
 // navBar
@@ -155,7 +156,12 @@ export default class extends Component{
 								/>
 								{/* ---Work--- */}
 								{/* ---Contract--- */}
-								<Scene key="contractOptions" component={ContractOptions} title="contract" hideNavBar={false}/>
+								<Scene key="contractOptions" component={ContractOptions} 
+									title="contract" hideNavBar={false}
+								/>
+								<Scene key="nativeShare" component={ShareSystemContainer} 
+									title="分享和下载" hideNavBar={false}
+								/>
 								{/* ---Mine--- */}
 								{/* ---Demo--- */}
 								<Scene key="navUseSystem" component={UseSystemContainer} title="SystemNav" 

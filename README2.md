@@ -64,4 +64,21 @@
 			链接：https://www.jianshu.com/p/b0cfe7f11ee7
 			参照 自己原来项目
 			
+	## v0.4.0 
+		js 调iOS本地系统分享 & 分享和下载文件并分享
+
+		UIActivityViewController 系统分享（主要是 分享文字，图片， url）
+		UIDocumentInteractionController 分享预览文件
+
+		项目工程中分享文件只是分享工程中固定文件，实际项目需要具体考虑以下流程
+ 		* 1.文件流下载；
+		* 2.文件流格式转换（如转换为PDF格式文件）；
+		* 3.分享文件；
+		*	4.文件清理
+		（如果项目中遇到此类情况可咨询我）
+
+		补充参考（以下这些参考主要用于下载文件处理文件时）:
+			iOS 沙盒说明 url:https://www.jianshu.com/p/0dbe875d7723
+			iOS 文件操作 url: https://www.jianshu.com/p/e3461a905a14
+			用AFNetworking 下载文件 url: https://www.jianshu.com/p/3f154e4fd4ae
 		
