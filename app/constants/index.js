@@ -1,9 +1,9 @@
 
 import * as distancesCons from './distances'
 import * as colorsCons from './colors'
-import * as styleCons from './style.js'
+import * as styleCons from './style'
 
-module.exports = {
+export {
 	distancesCons,
 	colorsCons,
   styleCons

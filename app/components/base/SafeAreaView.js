@@ -4,7 +4,7 @@
  */
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {View, Text, Image, StyleSheet, SafeAreaView} from 'react-native'
+import {StyleSheet, SafeAreaView} from 'react-native'
 
 class SafeView extends Component{
 	render(){
@@ -20,7 +20,7 @@ class SafeView extends Component{
 
 SafeView.propTypes = {
 	children: PropTypes.any,
-	style: PropTypes.object,
+	style: PropTypes.any,
 	forceInset: PropTypes.object,
 }
 

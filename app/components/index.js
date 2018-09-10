@@ -6,7 +6,7 @@ import { ButtonCollection, InputComponent } from './common'
 import { ListFlat as ListComponent } from './list'
 import { FacebookTabBar, TextTabBar } from './scrollableTabBar'
 
-module.exports = {
+export {
 	SafeView,
 	DemoLightBox,
 	ErrorModal,

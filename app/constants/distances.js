@@ -1,6 +1,6 @@
 
 
-import {PixelRatio, Dimensions, StyleSheet, Platform} from 'react-native'
+import {PixelRatio, Dimensions, Platform} from 'react-native'
 import DeviceInfo from 'react-native-device-info'
 
 ///  nav
@@ -31,7 +31,7 @@ const BORDER_WIDTH = (2 / PixelRatio.get()) ? (2 / PixelRatio.get()) : 1
 // device
 const DEVEICE_WIDTH = Dimensions.get('window').width
 
-module.exports = {
+export {
 	NAV_HEIGHT,
 	NAVBAR_LEFT_MARGIN,
   NAV_BARBUTTON_WIDTH,

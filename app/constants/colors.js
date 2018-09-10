@@ -9,7 +9,7 @@ const BORDER_COLOR = '#d3d3d3'
 const NAVBAR_BG_COLOR = '#73b1fa'
 const NAV_TITLE_COLOR = '#fff'
 
-module.exports = {
+export {
 	TABBAR_NOR_COLOR,
 	TABBAR_SEL_COLOR,
 	CUSTOM_BULE_COLOR,

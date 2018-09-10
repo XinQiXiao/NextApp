@@ -81,4 +81,9 @@
 			iOS 沙盒说明 url:https://www.jianshu.com/p/0dbe875d7723
 			iOS 文件操作 url: https://www.jianshu.com/p/e3461a905a14
 			用AFNetworking 下载文件 url: https://www.jianshu.com/p/3f154e4fd4ae
-		
+
+	## t0.5.0
+		1.修复 TabContainer 系列中 后点击的 tabbarItem 会覆盖之前 tabbarItem navBar
+		(原因是 在main 中 TabContainer是Scene 拥有者，Home,Word,Mine 只是 TabContainer中组件，调用Action.refresh 会不断更新 TabContainer的 信息，实际此时Home,Word,Mine调用的Actions.refresh 都是 TabContainer 自身)
+		修复过程，目前的办法是， 在TabContainer中tabItem 点击切换时，分情况 通过Actions.refresh刷新 navBar 信息，
+		2.遗留bug ,上述这种方法 navBar 中 rightClick 如法，传递，如 Home 页面参数，目前想到的办法是通过redux修改。（比如 Home rightBar 是筛选，当进入筛选，筛选完回调时，通过在 筛选页面 set homeReducer来传递给 Home页面信息）

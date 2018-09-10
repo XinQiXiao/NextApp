@@ -16,21 +16,6 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 class CurrentPage extends Component{
-	constructor(props){
-		super(props)
-
-	}
-
-	componentWillMount(){
-		Actions.refresh({
-			title: 'mine',
-		})
-	}
-
-	componentDidMount(){
-		// console.log('this.props ===>', this.props)
-		// console.log('global ===>', global)
-	}
 
 	render(){
 		return (

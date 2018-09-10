@@ -2,7 +2,7 @@
 import { StyleSheet, Platform } from 'react-native'
 
 import * as colors from './colors'
-import * as distances from './distances.js' 
+import * as distances from './distances' 
 
 
 const navStyle = StyleSheet.create({
@@ -49,6 +49,6 @@ const navStyle = StyleSheet.create({
   }
 })
 
-module.exports = {
+export {
   navStyle
 }
